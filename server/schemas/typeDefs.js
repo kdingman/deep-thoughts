@@ -1,5 +1,5 @@
 // import the gql tagged template function
-const { gql } = require('apollo-server-express');
+const { gql } = require("apollo-server-express");
 
 // Create typeDefs
 const typeDefs = gql`
@@ -14,11 +14,11 @@ const typeDefs = gql`
     }
 
     type Thought {
-        _id: ID // looking for a unique identfier
+        _id: ID 
         thoughtText: String
         createdAt: String
         username: String
-        reactionCount: Int // integer
+        reactionCount: Int 
         reactions: [Reaction]
     }
 
@@ -33,7 +33,7 @@ const typeDefs = gql`
         users: [User]
         user(username: String!): User
         thoughts(username: String): [Thought]
-        thoughts(username: String): [Thought]
+        thought(_id: ID!): Thought
     }
 `;
 
