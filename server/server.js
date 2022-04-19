@@ -1,6 +1,7 @@
 const express = require("express");
 // import Apollo
 const { ApolloServer } = require("apollo-server-express");
+const { authMiddleware } = require("./utils/auth");
 
 // import typeDefs and resolvers
 const { typeDefs, resolvers } = require("./schemas");
@@ -13,7 +14,8 @@ const app = express();
 const startServer = async () => {
   const server = new ApolloServer({
     typeDefs,
-    resolvers
+    resolvers,
+    context: authMiddleware // ensures that every request performs auth check, updated request object will be passed to the resolvers as the context
   });
 
   // Start the Apollo Server
