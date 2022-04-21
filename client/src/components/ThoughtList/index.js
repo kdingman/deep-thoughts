@@ -1,6 +1,6 @@
 import React from "react";
 
-import { link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // Instruct the Thoughtlist component to receive 2 props -> Title and Thoughts array
 // Destruct the argument data to avoid using props.title and props.thoughts thoughout JSX code
