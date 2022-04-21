@@ -5,8 +5,8 @@ import { userQuery } from "@apollo/client";
 import { QUERY_THOUGHT } from '../utils/queries';
 import ReactionList from '../components/ReactionList';
 
-const SingleThought = props => {
-  const { id: thoughId } =  useParams();
+const SingleThought = (props) => {
+  const { id: thoughtId } =  useParams();
   console.log(thoughtId);
 
   const { loading, data } = userQuery(QUERY_THOUGHT, {
