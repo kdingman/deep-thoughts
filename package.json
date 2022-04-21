@@ -23,5 +23,10 @@
   "homepage": "https://github.com/kdingman/deep-thoughts#readme",
   "devDependencies": {
     "concurrently": "^7.1.0"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.5.10",
+    "apollo-link-context": "^1.0.20",
+    "graphql": "^15.8.0"
   }
 }
