@@ -9,7 +9,6 @@ import ThoughtForm from '../components/ThoughtForm';
 
 import { ADD_FRIEND } from "../utils/mutations";
 
-import { useQuery } from "@apollo/client";
 import { QUERY_USER, QUERY_ME } from "../utils/queries";
 
 import Auth from "../utils/auth";
